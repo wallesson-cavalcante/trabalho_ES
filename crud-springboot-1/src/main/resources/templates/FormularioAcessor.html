@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>AFINANP</title>
+<link rel="stylesheet" type="text/css" href="/css/edicao.css"/>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+</head>
+<body>
+ 	<img src="/imagem/afi.png" alt="some text" width=1620 height=100>
+	<br><a class="btn btn-warning" th:href="@{/pessoa/inicial}"><button>Retornar</button></a>
+ 	<div id="area">
+		<form id="formulario" autocomplete="off" action="/pessoa/salvarAcessor" method="POST" th:object="${acessor}"
+		enctype="multipart/form-data">	
+			<div class="alert alert-success" role="alert"th:if="${!#strings.isEmpty(mensagem)}">
+				<span th:text="${mensagem}"> </span>
+			</div>
+		
+			<div class="alert alert-danger" role="alert" th:if="${#fields.hasAnyErrors()}">
+			<div th:each="detailedError : ${#fields.detailedErrors()}">
+				<span th:text="${detailedError.message}"> </span>
+			</div>
+			
+			</div>
+			
+			<center>
+				<fieldset>
+					<label>NOME:<br><input type="text" name="nomeAcessor"placeholder="Ex.: Adamastor"><br>
+					<label>CPF:<br><input type="text" name="cpfAcessor"placeholder="Ex.: 000.000.000-00"><br>
+					<label>RG:<br><input type="text" name="rgAcessor"placeholder="Ex.: 0000111111-22"><br>
+					<label>SEXO:<br><div class="form-check form-check-inline">
+  						<input class="form-check-input" type="radio" name="sexoAcessor" id="inlineRadio1" value="Masculino">
+  						<label class="form-check-label" for="inlineRadio1">M</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="sexoAcessor" id="inlineRadio2" value="Feminino">
+					  <label class="form-check-label" for="inlineRadio2">F</label>
+					</div>
+					<br>
+					<label>DATA DE NASCIMENTO:<input type="date" name="dataNacAcessor"><br>
+					<label>GRAU CIÊNTIFICO:<input type="text" name="grauAcessor"placeholder="Ex.: Mestre"><br>
+					<br><input type="submit" value="Cadastrar">	
+				</fieldset>
+			</center>
+		</form>
+	</div>
+</body>
+</html>

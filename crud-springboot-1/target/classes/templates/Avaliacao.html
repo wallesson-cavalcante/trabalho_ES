@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AFINANP</title>
+<link rel="stylesheet" type="text/css" href="/css/aval.css"/>
+</head>
+<body>
+<img src="/imagem/afi.png" alt="some text" width=1620 height=100>
+	
+	<br>
+	<br>
+	<div id="area">
+		<form id="formulario" autocomplete="off" action="/pessoa/avaliarProjeto" method="POST" th:object="${projeto}">
+			<input type="hidden" th:field="*{codigoProjeto}">
+			<center>
+				<fieldset>
+				<br>
+					STATUS: <input type="text" th:field="*{status}"> <br>
+					RELEVANCIA: <input type="text" th:field="*{relevancia}"> <br>
+					DATA DE AVALIAÇÃO: <input type="date" th:field="*{dataRes}"> <br>
+					<input type="submit" value="AVALIAR">
+				</fieldset>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>DESCRIÇÃO DO PROJETO:<br><textarea type="text"  th:field="*{descricao}" rows="10" cols="40"></textarea><br>
+			
+			</center>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+				<input type="text" th:field="*{titulo}"> <br>
+				<input type="text" th:field="*{duracao}"> <br>
+				<input type="text" th:field="*{instituicao}"> <br>
+				<input type="date" th:field="*{dataSub}"> <br>
+				<input type="text" th:field="*{pesqProjeto}"> <br>
+				
+	
+		</form>
+	</div>
+
+	
+
+
+</body>
+</html>
